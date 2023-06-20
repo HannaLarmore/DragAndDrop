@@ -1,6 +1,6 @@
 # DragAndDrop
 Have figured out almost everything except:
-  1. how to serialize data coming in currently as null
+  1. how to serialize data coming in currently null
   2. how to get canvases to be the right size
   
 I belive once serializing data is figured out I should be able to achieve the drop portion of drag and drop
