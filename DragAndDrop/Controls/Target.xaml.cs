@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -19,7 +20,7 @@ namespace DragAndDrop.Controls
     /// <summary>
     /// Interaction logic for Target.xaml
     /// </summary>
-    public partial class Target : UserControl, INotifyPropertyChanged
+    public partial class Target : UserControl, INotifyPropertyChanged, ISerializable
     {
         public Target(string name)
         {
@@ -33,9 +34,16 @@ namespace DragAndDrop.Controls
 
         public event PropertyChangedEventHandler PropertyChanged;
 
+        public void GetObjectData(SerializationInfo info, StreamingContext context)
+        {
+            throw new NotImplementedException();
+        }
+
         protected void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
+
+
 }

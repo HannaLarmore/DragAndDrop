@@ -6,14 +6,17 @@
              xmlns:local="clr-namespace:DragAndDrop.Views"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid AllowDrop="True" MouseMove="Grid_MouseMove" >
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-
-        <TextBlock Grid.Row ="0" FontSize="20" Text="Logic Tree" HorizontalAlignment="Center"/>
-        <Rectangle Grid.Row ="1"  Fill="Black" Height="2" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="0,5,0,5"/>
-    </Grid>
+    <Canvas AllowDrop="True" Drop="canvas_Drop" DragOver="canvas_DragOver" MouseMove="canvas_MouseMove"  x:Name="canvas" Background="Transparent">
+        <ContentControl AllowDrop="True" x:Name="TempPlaceHolder"/>
+        <!--<Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+            <TextBlock Grid.Row ="0" FontSize="20" Text="Logic Tree" HorizontalAlignment="Center"/>
+            <Rectangle Grid.Row ="1"  Fill="Black" Height="2" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="0,5,0,5"/>
+        </Grid>-->
+    </Canvas>
 </UserControl>
